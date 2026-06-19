@@ -1,0 +1,1671 @@
+{
+  "meta": {
+    "subject": "Spark大数据分析与实战（第2版）",
+    "version": "1.0",
+    "totalQuestions": 145
+  },
+  "chapters": [
+    {
+      "id": "ch1",
+      "name": "Scala语言基础",
+      "questions": [
+        {
+          "id": "ch1-fill-1",
+          "type": "fill",
+          "stem": "Scala是一门结合了面向对象编程和       编程优势的多范式编程语言。",
+          "answer": [
+            "函数式"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch1-fill-2",
+          "type": "fill",
+          "stem": "在Scala中，数据类型可以分为       和引用类型。",
+          "answer": [
+            "值类型"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch1-fill-3",
+          "type": "fill",
+          "stem": "在Scala中，定义变量的关键字是       。",
+          "answer": [
+            "var"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch1-fill-4",
+          "type": "fill",
+          "stem": "在Scala中，定义方法的关键字是       。",
+          "answer": [
+            "def"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch1-fill-5",
+          "type": "fill",
+          "stem": "在Scala中，       语句可以根据一个值与多个模式的匹配情况执行不同的代码块。",
+          "answer": [
+            "match"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch1-bool-1",
+          "type": "boolean",
+          "stem": "在Scala中声明变量时，可以省略变量的类型。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch1-bool-2",
+          "type": "boolean",
+          "stem": "在Scala中，表示相减后再赋值的赋值运算符是−−。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch1-bool-3",
+          "type": "boolean",
+          "stem": "在Scala中，元组中元素的数量不能超过21个。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch1-bool-4",
+          "type": "boolean",
+          "stem": "在Scala中，Set类型的集合中不包含重复元素。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch1-bool-5",
+          "type": "boolean",
+          "stem": "在Scala中，子类可以访问父类的私有属性。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch1-choice-1",
+          "type": "single",
+          "stem": "下列选项中，属于Scala中值类型的是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "Unit"
+            },
+            {
+              "label": "C",
+              "text": "Integer"
+            },
+            {
+              "label": "D",
+              "text": "Date"
+            }
+          ],
+          "answer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "ch1-choice-2",
+          "type": "single",
+          "stem": "下列选项中，用户获取Set大小的方法是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "length"
+            },
+            {
+              "label": "C",
+              "text": "len"
+            },
+            {
+              "label": "D",
+              "text": "count"
+            }
+          ],
+          "answer": "A",
+          "explanation": ""
+        },
+        {
+          "id": "ch1-choice-3",
+          "type": "single",
+          "stem": "下列选项中，关于特质描述正确的有（",
+          "options": [],
+          "answer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "ch1-choice-4",
+          "type": "multiple",
+          "stem": "下列选项中，关于继承关系描述错误的是（",
+          "options": [],
+          "answer": [
+            "C",
+            "D"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch1-choice-5",
+          "type": "single",
+          "stem": "下列选项中，可以通过索引访问元素的数据结构有（",
+          "options": [
+            {
+              "label": "B",
+              "text": "Map"
+            },
+            {
+              "label": "C",
+              "text": "List"
+            },
+            {
+              "label": "D",
+              "text": "元组"
+            }
+          ],
+          "answer": "A",
+          "explanation": ""
+        },
+        {
+          "id": "ch1-code-1",
+          "type": "code",
+          "stem": "设计一个简单的学生信息管理系统，要求实现以下功能。\n类Student用于传递学生信息，包括属性name（姓名）、age（年龄）和gender（性别）。\n单例对象用于管理学生信息，包括添加学生、删除学生、按姓名查询学生、按年龄查询学生的功能。\n使用Set类型的集合来存储学生信息。",
+          "answer": "（参考答案暂缺，请参阅教材相关内容）",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "name": "Spark基础",
+      "questions": [
+        {
+          "id": "ch2-fill-1",
+          "type": "fill",
+          "stem": "Spark生态系统中，       是用来操作结构化数据的组件。",
+          "answer": [
+            "Spark SQL"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch2-fill-2",
+          "type": "fill",
+          "stem": "驱动程序负责将Spark程序转换为       。",
+          "answer": [
+            "任务"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch2-fill-3",
+          "type": "fill",
+          "stem": "Structured Streaming是构建在       之上的一种实时数据处理的组件。",
+          "answer": [
+            "SparkContext"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch2-fill-4",
+          "type": "fill",
+          "stem": "Spark通过       来实现容错性。",
+          "answer": [
+            "Spark SQL"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch2-bool-1",
+          "type": "boolean",
+          "stem": "High Availability模式部署的Spark只能有一个Master。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch2-bool-2",
+          "type": "boolean",
+          "stem": "Spark on YARN模式意味着将Spark集群作为YARN应用程序来运行。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch2-bool-3",
+          "type": "boolean",
+          "stem": "Worker负责Spark集群中任务的调度。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch2-bool-4",
+          "type": "boolean",
+          "stem": "执行器是在Master上运行的进程。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch2-bool-5",
+          "type": "boolean",
+          "stem": "Master Web UI的默认端口为8081。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch2-choice-1",
+          "type": "single",
+          "stem": "下列选项中，不属于Spark生态系统中的组件是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "MLlib"
+            },
+            {
+              "label": "C",
+              "text": "GraphX"
+            },
+            {
+              "label": "D",
+              "text": "PySpark"
+            }
+          ],
+          "answer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "ch2-choice-2",
+          "type": "single",
+          "stem": "下列选项中，属于Spark基本架构中Master职责的有（",
+          "options": [
+            {
+              "label": "B",
+              "text": "任务调度"
+            },
+            {
+              "label": "C",
+              "text": "容错管理"
+            },
+            {
+              "label": "D",
+              "text": "任务执行"
+            }
+          ],
+          "answer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "ch2-choice-3",
+          "type": "multiple",
+          "stem": "下列选项中，属于Master默认通信端口的是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "8081"
+            },
+            {
+              "label": "C",
+              "text": "7077"
+            },
+            {
+              "label": "D",
+              "text": "8088"
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch2-choice-4",
+          "type": "single",
+          "stem": "下列选项中，用于在spark-submit中指定部署模式的参数是（",
+          "options": [
+            {
+              "label": "A",
+              "text": "--master\tB. --\tdeploy-mode\t\tC. --\tsubmit-mode\t\tD. --deloy"
+            }
+          ],
+          "answer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "ch2-choice-5",
+          "type": "single",
+          "stem": "下列选项中，关于Spark基本概念描述正确的是（",
+          "options": [
+            {
+              "label": "A",
+              "text": "作业是执行器上的工作单元"
+            },
+            {
+              "label": "B",
+              "text": "任务调度器会将作业划分为多个任务"
+            },
+            {
+              "label": "C",
+              "text": "执行器负责执行任务"
+            },
+            {
+              "label": "D",
+              "text": "集群管理器负责创建SparkContext"
+            }
+          ],
+          "answer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "ch2-essay-1",
+          "type": "essay",
+          "stem": "简述客户端模式和集群模式下部署Spark程序的区别。\n简述Spark运行流程。",
+          "answer": "客户端模式下Driver Program会运行在提交Spark程序的服务器中。因此，可以在服务器中查看Spark程序输出的结果。\n集群模式下Driver Program会运行在Spark集群的Worker中，或者作为一个ApplicationMaster在YARN集群的NodeManager上运行，这取决于Spark程序运行在Spark集群还是YARN集群。",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "name": "Spark RDD弹性分布式数据集",
+      "questions": [
+        {
+          "id": "ch3-fill-1",
+          "type": "fill",
+          "stem": "RDD是Spark中一个基本的数据处理模型，它具有       和并行的数据结构。",
+          "answer": [
+            "可容错性"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch3-fill-2",
+          "type": "fill",
+          "stem": "Spark提供了       方法用于从文件系统中的文件读取数据并创建RDD。",
+          "answer": [
+            "textFile()"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch3-fill-3",
+          "type": "fill",
+          "stem": "RDD的依赖关系有宽依赖和       。",
+          "answer": [
+            "窄依赖"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch3-fill-4",
+          "type": "fill",
+          "stem": "通过设置检查点方式实现RDD的故障恢复本质上是将RDD写入       进行存储。",
+          "answer": [
+            "磁盘"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch3-fill-5",
+          "type": "fill",
+          "stem": "在Spark中RDD采用       求值的方式。",
+          "answer": [
+            "惰性"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch3-bool-1",
+          "type": "boolean",
+          "stem": "RDD可以被分为多个分区。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch3-bool-2",
+          "type": "boolean",
+          "stem": "转换算子需要通过行动算子触发计算。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch3-bool-3",
+          "type": "boolean",
+          "stem": "宽依赖是指每个父RDD的分区最多被子RDD的一个分区使用。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch3-bool-4",
+          "type": "boolean",
+          "stem": "若有向图可以从任意顶点出发经过若干条边回到该点，则称为有向无环图。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch3-bool-5",
+          "type": "boolean",
+          "stem": "窄依赖是划分Stage的依据。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch3-choice-1",
+          "type": "single",
+          "stem": "下列选项中，属于Spark分区器的是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "HashPartitioner"
+            },
+            {
+              "label": "C",
+              "text": "SortPartitioner"
+            },
+            {
+              "label": "D",
+              "text": "LinearPartitioner"
+            }
+          ],
+          "answer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "ch3-choice-2",
+          "type": "single",
+          "stem": "下列方法中，用于指定RDD分区数量的是（",
+          "options": [],
+          "answer": "A",
+          "explanation": ""
+        },
+        {
+          "id": "ch3-choice-3",
+          "type": "single",
+          "stem": "repartition()",
+          "options": [
+            {
+              "label": "B",
+              "text": "setPartiton()"
+            },
+            {
+              "label": "C",
+              "text": "rangePartition()"
+            },
+            {
+              "label": "D",
+              "text": "hashPartition()"
+            }
+          ],
+          "answer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "ch3-choice-4",
+          "type": "single",
+          "stem": "下列选项中，不属于转换算子的是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "reduceByKey"
+            },
+            {
+              "label": "C",
+              "text": "groupByKey"
+            },
+            {
+              "label": "D",
+              "text": "reduce"
+            }
+          ],
+          "answer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "ch3-choice-5",
+          "type": "multiple",
+          "stem": "下列选项中，既能使RDD产生宽依赖也能使RDD产生窄依赖的算子是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "join"
+            },
+            {
+              "label": "C",
+              "text": "union"
+            },
+            {
+              "label": "D",
+              "text": "groupByKey"
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch3-choice-6",
+          "type": "single",
+          "stem": "下列选项中，属于RDD持久化级别的有（",
+          "options": [
+            {
+              "label": "A",
+              "text": "MEMORY_ONLY   \tB. MEMORY_AND_DISK"
+            },
+            {
+              "label": "C",
+              "text": "DISK_ONLY\t\t\tD. OFF_HEAP"
+            }
+          ],
+          "answer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "ch3-essay-1",
+          "type": "essay",
+          "stem": "简述RDD提供的两种故障恢复方式。",
+          "answer": "血统方式主要是根据RDD之间的依赖关系对丢失数据的RDD进行数据恢复。如果丢失数据的子RDD在进行窄依赖运算，则只需重新计算丢失数据的父RDD的对应分区，不需要依赖其他的节点，并且在计算过程中不会存在冗余计算；若丢失数据的子RDD在进行宽依赖运算，则需要父RDD的所有分区都要进行一次完整的计算，在计算过程中会存在冗余计算。\n设置检查点方式本质上是将RDD写入磁盘进行存储。当RDD在进行宽依赖运算时，只需要在运算的中间阶段设置一个检查点进行容错。",
+          "explanation": ""
+        },
+        {
+          "id": "ch3-essay-2",
+          "type": "essay",
+          "stem": "简述RDD在Spark中的运行流程。",
+          "answer": "当RDD Objects创建完成后，SparkContext会根据RDD Objects的转换操作构建出一个DAG，然后将DAG提交给DAG Scheduler。\nDAG Scheduler将DAG划分成不同的Stage，每个Stage都是一个TaskSet（任务集合），每个TaskSet会由一组可以并行执行的任务组成。DAG Scheduler会将Stage传输给Task Scheduler。\nTask Scheduler通过与内部的Cluster Manager交互，将Stage中的Task根据其所需资源动态分配到合适的Worker中。若期间有某个Task传输失败，则Task Scheduler会重新尝试传输Task，并向DAG Scheduler汇报当前的传输状态。若某个Task执行失败，则Task Scheduler会根据失败情况进行相应的处理。\nWorker接收到Task后，把Task运行在Executor中，每个Task相当于Executor中的一个Thread（线程）。",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "name": "Spark SQL结构化数据处理模块",
+      "questions": [
+        {
+          "id": "ch4-fill-1",
+          "type": "fill",
+          "stem": "Spark SQL是Spark用来处理       的一个模块。",
+          "answer": [
+            "结构化数据"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch4-fill-2",
+          "type": "fill",
+          "stem": "Spark SQL作为分布式SQL查询引擎，让用户可以通过Dataset API、DataFrame API和        3种方式实现对结构化数据的处理。",
+          "answer": [
+            "SQL"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch4-fill-3",
+          "type": "fill",
+          "stem": "DataFrame是一种以       为基础的分布式数据集。",
+          "answer": [
+            "RDD"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch4-fill-4",
+          "type": "fill",
+          "stem": "用于将一个RDD转换为DataFrame的方法是       。",
+          "answer": [
+            "toDF()"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch4-fill-5",
+          "type": "fill",
+          "stem": "Spark提供了       和编程方式两种方式实现将RDD转换为DataFrame。",
+          "answer": [
+            "反射机制"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch4-bool-1",
+          "type": "boolean",
+          "stem": "DataFrame可以执行绝大多数RDD的功能。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch4-bool-2",
+          "type": "boolean",
+          "stem": "Spark SQL无法向Hive的数据表插入数据。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch4-bool-3",
+          "type": "boolean",
+          "stem": "使用SQL风格操作DataFrame之前，需要将其创建为临时视图。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch4-bool-4",
+          "type": "boolean",
+          "stem": "sort()方法默认的排序规则为降序排序。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch4-bool-5",
+          "type": "boolean",
+          "stem": "Spark SQL可以通过JDBC从MySQL数据库中读取数据以及插入数据。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch4-choice-1",
+          "type": "single",
+          "stem": "下列关于DataFrame的DSL风格中方法的描述，不正确的是（",
+          "options": [],
+          "answer": "A",
+          "explanation": ""
+        },
+        {
+          "id": "ch4-choice-2",
+          "type": "single",
+          "stem": "下列选项中，不属于Spark SQL内置标量函数的是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "variance"
+            },
+            {
+              "label": "C",
+              "text": "date_add\t\t\t\t\t\t\tD. datediff"
+            }
+          ],
+          "answer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "ch4-choice-3",
+          "type": "single",
+          "stem": "下列选项中，属于Spark SQL内置聚合函数的是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "stddev"
+            },
+            {
+              "label": "C",
+              "text": "element_at\t\t\t\t\t\tD. var_samp"
+            }
+          ],
+          "answer": "A",
+          "explanation": ""
+        },
+        {
+          "id": "ch4-choice-4",
+          "type": "single",
+          "stem": "下列选项中，属于Catalyst内部组件的有（",
+          "options": [
+            {
+              "label": "A",
+              "text": "Parser组件\t\tB. Analyzer组件  C. Optimizer组件\t\tD. Query Execution组件"
+            }
+          ],
+          "answer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "ch4-choice-5",
+          "type": "multiple",
+          "stem": "在Spark SQL的内置标量函数中，可以根据指定的键返回对应的值的是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "map_values"
+            },
+            {
+              "label": "C",
+              "text": "element_at\t\t\t\t\t\tD. substring"
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "D"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch4-essay-1",
+          "type": "essay",
+          "stem": "简述创建SparkSession对象的两种方式。\n简述Catalyst内部组件的运行流程。",
+          "answer": "（1）通过代码SparkSession.builder.master().appName().getOrCreate()来创建。\n（2）Spark Shell中会默认创建一个名为spark的SparkSession对象。",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "name": "HBase分布式数据库",
+      "questions": [
+        {
+          "id": "ch5-fill-1",
+          "type": "fill",
+          "stem": "HBase是一个高可靠性、高性能、面向列、可扩展的       数据库。",
+          "answer": [
+            "分布式"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch5-fill-2",
+          "type": "fill",
+          "stem": "Hadoop中的       为HBase提供了高可靠的底层存储支持。",
+          "answer": [
+            "HDFS"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch5-fill-3",
+          "type": "fill",
+          "stem": "HBase通过       协议与客户端进行通信。",
+          "answer": [
+            "RPC"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch5-fill-4",
+          "type": "fill",
+          "stem": "在HBase中，Row Key按照       顺序进行存储。",
+          "answer": [
+            "字典顺序"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch5-fill-5",
+          "type": "fill",
+          "stem": "HBase中列由列族和       两部分组成。",
+          "answer": [
+            "列标识"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch5-bool-1",
+          "type": "boolean",
+          "stem": "HBase中数据表的每一个列只能存储一个版本的数据。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch5-bool-2",
+          "type": "boolean",
+          "stem": "HBase是基于行存储的。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch5-bool-3",
+          "type": "boolean",
+          "stem": "HBase高可用集群中可以有多个HMaster在工作。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch5-bool-4",
+          "type": "boolean",
+          "stem": "StoreFile底层是以HFile的格式保存在HDFS上。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch5-bool-5",
+          "type": "boolean",
+          "stem": "HBase中每个HRegionServer可以包含多个HRegion。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch5-choice-1",
+          "type": "single",
+          "stem": "下列选项中，关于HBase描述错误的是（",
+          "options": [],
+          "answer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "ch5-choice-2",
+          "type": "single",
+          "stem": "下列选项中，作为HBase文件存储系统的是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "HDFS"
+            },
+            {
+              "label": "C",
+              "text": "Hive"
+            },
+            {
+              "label": "D",
+              "text": "Linux"
+            }
+          ],
+          "answer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "ch5-choice-3",
+          "type": "single",
+          "stem": "下列选项中，不属于HBase的数据模型的是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "列"
+            },
+            {
+              "label": "C",
+              "text": "列族"
+            },
+            {
+              "label": "D",
+              "text": "主键"
+            }
+          ],
+          "answer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "ch5-choice-4",
+          "type": "single",
+          "stem": "下列组件中，属于HBase架构中的有（",
+          "options": [
+            {
+              "label": "A",
+              "text": "Client\t\t\tB. HMaster\t\tC. HRegionServer\tD. StoreFile"
+            }
+          ],
+          "answer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "ch5-choice-5",
+          "type": "multiple",
+          "stem": "在HBase常见的Java API中，用于实现查询HBase数据表所有数据的是（",
+          "options": [
+            {
+              "label": "A",
+              "text": "Table\t\t\tB. Put\t\t\tC.Get\t\t\tD. Scan"
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch5-essay-1",
+          "type": "essay",
+          "stem": "简述HBase数据模型的内容。\n简述HBase读写数据的流程。",
+          "answer": "Row Key表示行键，是HBase数据表中的每一行数据的唯一标识符。\nTimestamp表示时间戳，记录每次操作数据的时间。\n列由列族和列标识两部分组成，两者之间用“:”分隔。\n列族由多个列组成。",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "name": "Kafka分布式发布订阅消息系统",
+      "questions": [
+        {
+          "id": "ch6-fill-1",
+          "type": "fill",
+          "stem": "消息队列主要应用场景为       、系统解耦和       。",
+          "answer": [
+            "异步处理",
+            "流量消峰"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch6-fill-2",
+          "type": "fill",
+          "stem": "消息传递常见的模式是点对点消息传递模式和       。",
+          "answer": [
+            "发布/订阅消息传递模式"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch6-fill-3",
+          "type": "fill",
+          "stem": "Kafka是一个基于       系统的分布式发布订阅消息系统。",
+          "answer": [
+            "ZooKeeper"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch6-fill-4",
+          "type": "fill",
+          "stem": "Kafka具有高吞吐，低延迟、       、持久性、       和支持多种语言的优点。",
+          "answer": [
+            "可扩展性",
+            "容错性"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch6-fill-5",
+          "type": "fill",
+          "stem": "消息由生产者发布到Kafka中后，Kafka采用       模型的方式消费消息。",
+          "answer": [
+            "拉取"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch6-bool-1",
+          "type": "boolean",
+          "stem": "Kafka短时间可以处理几十万条消息，但是延迟很高。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch6-bool-2",
+          "type": "boolean",
+          "stem": "Kafka消费者消费消息后，会将已消费消息的offset保存在ZooKeeper中。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch6-bool-3",
+          "type": "boolean",
+          "stem": "在Kafka中，消费者消费一个主题中的消息后，后续便不能再次消费。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch6-bool-4",
+          "type": "boolean",
+          "stem": "在Kafka中，消费者组由多个消费者组成，组成的消费者组之间相互影响。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch6-bool-5",
+          "type": "boolean",
+          "stem": "在Kafka中，角色为Follower的Partition会复制角色为Leader的Partition中的消息。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch6-choice-1",
+          "type": "single",
+          "stem": "下列选项中，不属于Kafka优点的是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "高吞吐，低延迟"
+            },
+            {
+              "label": "C",
+              "text": "持久性"
+            },
+            {
+              "label": "D",
+              "text": "高可用性"
+            }
+          ],
+          "answer": "A",
+          "explanation": ""
+        },
+        {
+          "id": "ch6-choice-2",
+          "type": "single",
+          "stem": "通过Shell操作设置Kafka主题分区数时，需要使用的参数是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "--partitions"
+            },
+            {
+              "label": "C",
+              "text": "--replication-factor"
+            },
+            {
+              "label": "D",
+              "text": "--alter"
+            }
+          ],
+          "answer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "ch6-choice-3",
+          "type": "single",
+          "stem": "使用Scala API操作Kafka时，需要订阅一个或多个主题，需要使用的方法是（",
+          "options": [
+            {
+              "label": "A",
+              "text": "abortTransaction()\t\t                  B. partitionsFor(String topic)"
+            },
+            {
+              "label": "C",
+              "text": "subscribe(Collection<String> topics)\t\t      D. poll(Duration timeout)"
+            }
+          ],
+          "answer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "ch6-essay-1",
+          "type": "essay",
+          "stem": "简述Kafka的优点。\n简述Kafka的工作流程。",
+          "answer": "（1）高吞吐，低延迟。Kafka可以每秒处理数量庞大的消息，并且具有较低的延迟。\n（2）可扩展性。Kafka是一个分布式系统，用户可以根据实际应用场景自由动态地扩展Kafka服务器。\n（3）持久性。Kafka可以将消息存储在磁盘上，以确保数据的持久性。\n（4）容错性。Kafka会将数据备份到多台服务器中，即使Kafka集群中的某一台服务器宕机，也不会影响整个系统的功能。\n（5）支持多种语言。Kafka支持Java、Scala、PHP、Python等多种语言，这使得开发人员在不同语言环境下使用Kafka更加便捷。",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "ch7",
+      "name": "Spark Streaming实时计算框架",
+      "questions": [
+        {
+          "id": "ch7-fill-1",
+          "type": "fill",
+          "stem": "实时计算的高效性在于其事件触发的机制，其触发源是_________。",
+          "answer": [
+            "无界的数据流"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch7-fill-2",
+          "type": "fill",
+          "stem": "Spark Streaming的优点有准实时性、_________、易用性和_________。",
+          "answer": [
+            "容错性",
+            "易整合性"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch7-fill-3",
+          "type": "fill",
+          "stem": "与传统的实时计算架构相比，Spark Streaming对数据的处理方式是_________。",
+          "answer": [
+            "粗粒度"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch7-fill-4",
+          "type": "fill",
+          "stem": "Spark Streaming提供了一种名为________高级抽象。",
+          "answer": [
+            "DStream"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch7-fill-5",
+          "type": "fill",
+          "stem": "在Spark Streaming中，DStream的内部是由一系列连续的________构成。",
+          "answer": [
+            "RDD"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch7-bool-1",
+          "type": "boolean",
+          "stem": "Spark Streaming是Spark的第一代实时计算框架。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch7-bool-2",
+          "type": "boolean",
+          "stem": "DStream的内部结构是由一系列连续的RDD组成，每个RDD代表一段时间内的数据集。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch7-bool-3",
+          "type": "boolean",
+          "stem": "在Spark Streaming中，DStream表示连续的数据流。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch7-bool-4",
+          "type": "boolean",
+          "stem": "在Spark Streaming中，窗口算子是一种特殊的无状态算子。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch7-bool-5",
+          "type": "boolean",
+          "stem": "在Spark Streaming中，输出操作会真正触发DStream的转换操作的执行。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch7-choice-1",
+          "type": "single",
+          "stem": "1．下列选项中，不属于Spark Streaming编程模型的是（  ）。",
+          "options": [
+            {
+              "label": "A",
+              "text": "输入操作\t\t\t\t\tB. 转换操作"
+            },
+            {
+              "label": "C",
+              "text": "执行操作\t\t\t\t\tD. 输出操作"
+            }
+          ],
+          "answer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "ch7-choice-2",
+          "type": "single",
+          "stem": "2. 下列关于Spark Streaming的相关描述，错误的是（  ）。",
+          "options": [
+            {
+              "label": "A",
+              "text": "Spark Streaming是Spark Core API的一个扩展"
+            },
+            {
+              "label": "B",
+              "text": "Spark Streaming处理数据时会因为自身的设计造成一定的延迟"
+            },
+            {
+              "label": "C",
+              "text": "Spark Streaming处理的数据源可以来自Kafka"
+            },
+            {
+              "label": "D",
+              "text": "Spark Streaming的高级抽象是RDD"
+            }
+          ],
+          "answer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "ch7-choice-3",
+          "type": "single",
+          "stem": "3. 下列算子中，属于Spark Streaming转换操作算子的有（  ）（多选）。",
+          "options": [
+            {
+              "label": "A",
+              "text": "transform\t\tB. print\t\tC. countByValue\t\tD. saveAsObjectFiles"
+            }
+          ],
+          "answer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "ch7-choice-4",
+          "type": "multiple",
+          "stem": "4. 下列关于Spark Streaming中转换操作算子的描述，正确的是（  ）。",
+          "options": [
+            {
+              "label": "A",
+              "text": "count算子用于统计DStream中每个RDD的元素数量"
+            },
+            {
+              "label": "B",
+              "text": "join算子用于对两个任意类型的DStream进行关联"
+            },
+            {
+              "label": "C",
+              "text": "filter算子用于判断DStream中的每个元素，将判断结果为false的元素返回到新生成的DStream"
+            },
+            {
+              "label": "D",
+              "text": "repartition算子用于指定Partition的数量来改变DStream的串行度"
+            }
+          ],
+          "answer": [
+            "A",
+            "C"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch7-choice-5",
+          "type": "single",
+          "stem": "5. 下列算子中，属于Spark Streaming窗口操作算子的有（  ）（多选）。",
+          "options": [
+            {
+              "label": "A",
+              "text": "window\t\t\t\tB. countByWindow"
+            },
+            {
+              "label": "C",
+              "text": "reduceByWindow\t\tD. countByValueAndWindow"
+            }
+          ],
+          "answer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "ch7-essay-1",
+          "type": "essay",
+          "stem": "简述Spark Streaming的工作原理。",
+          "answer": "Spark Streaming的工作原理主要涉及获取数据、处理数据和存储数据。当Spark Streaming从数据源获取数据之后，则可以使用诸如map、reduce、join和window等算子进行复杂的计算处理，最后将处理的结果存储到HDFS、Databases或Dashboards。",
+          "explanation": ""
+        },
+        {
+          "id": "ch7-essay-2",
+          "type": "essay",
+          "stem": "简述Spark Streaming的编程模型。",
+          "answer": "Spark Streaming编程模型主要由输入操作、转换操作和输出操作构成。Spark Streaming从数据源实时接收输入的数据流并生成DStream，这个DStream可以直接输出到存储系统，也可以根据实际业务需求利用算子对DStream进行转换，从而生成一个或多个DStream作为转换结果，然后将转换结果作为数据流输出到存储系统。",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "ch8",
+      "name": "Structured Streaming流计算引擎",
+      "questions": [
+        {
+          "id": "ch8-fill-1",
+          "type": "fill",
+          "stem": "Structured Streaming是一个基于       的可扩展且容错性高的流计算引擎。",
+          "answer": [
+            "Spark SQL"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch8-fill-2",
+          "type": "fill",
+          "stem": "Structured Streaming具有统一的编程范式、       和       3个显著的特点。",
+          "answer": [
+            "卓越的性能",
+            "多语言支持"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch8-fill-3",
+          "type": "fill",
+          "stem": "Structured Streaming支持的数据源有       、Kafka数据源和Socket数据源等。",
+          "answer": [
+            "文件数据源"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch8-fill-4",
+          "type": "fill",
+          "stem": "在流式数据处理中，时间分为       、注入时间和       3种时间概念。",
+          "answer": [
+            "处理时间",
+            "事件时间"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch8-fill-5",
+          "type": "fill",
+          "stem": "Structured Streaming提供了       、滑动窗口和       3个窗口操作。",
+          "answer": [
+            "滚动窗口",
+            "会话窗口"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch8-bool-1",
+          "type": "boolean",
+          "stem": "Structured Streaming默认情况下处理数据的方式是微批处理。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch8-bool-2",
+          "type": "boolean",
+          "stem": "Structured Streaming和Spark SQL共用API。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch8-bool-3",
+          "type": "boolean",
+          "stem": "Structured Streaming的核心思想是将离线数据看作一个不断追加数据的表。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch8-bool-4",
+          "type": "boolean",
+          "stem": "在流式数据处理中，处理时间是数据自身的属性。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch8-bool-5",
+          "type": "boolean",
+          "stem": "在Structured Streaming滚动窗口操作中，移动的窗口彼此之间不会发生重叠。",
+          "answer": false,
+          "explanation": ""
+        },
+        {
+          "id": "ch8-choice-1",
+          "type": "single",
+          "stem": "若使用Structured Streaming读取文件数据源，不能加载的数据格式为（",
+          "options": [
+            {
+              "label": "B",
+              "text": "CSV"
+            },
+            {
+              "label": "C",
+              "text": "Excel"
+            },
+            {
+              "label": "D",
+              "text": "Parquet"
+            }
+          ],
+          "answer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "ch8-choice-2",
+          "type": "single",
+          "stem": "下列选项中，可以将处理后的DataFrame以表的形式输出到内存接收器中的接收器是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "Kafka"
+            },
+            {
+              "label": "C",
+              "text": "Console"
+            },
+            {
+              "label": "D",
+              "text": "Memory"
+            }
+          ],
+          "answer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "ch8-choice-3",
+          "type": "single",
+          "stem": "下列关于Structured Streaming接收器的描述，正确的是（",
+          "options": [],
+          "answer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "ch8-choice-4",
+          "type": "multiple",
+          "stem": "下列选项中，不属于Structured Streaming转换操作算子的是（",
+          "options": [
+            {
+              "label": "A",
+              "text": "select\t\t\tB. where\t\t\tC. groupBy\t\tD. foreachRDD"
+            }
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch8-choice-5",
+          "type": "single",
+          "stem": "下列关于Structured Streaming窗口操作的描述，正确的是（",
+          "options": [
+            {
+              "label": "A",
+              "text": "滚动窗口包含重叠的数据"
+            },
+            {
+              "label": "B",
+              "text": "滑动窗口处理的数据不包含重叠的数据"
+            },
+            {
+              "label": "C",
+              "text": "会话窗口可以动态地调整窗口大小"
+            },
+            {
+              "label": "D",
+              "text": "session_window算子用于创建滑动窗口"
+            }
+          ],
+          "answer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "ch8-essay-1",
+          "type": "essay",
+          "stem": "简述Structured Streaming的特点。",
+          "answer": "（参考答案暂缺，请参阅教材相关内容）",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "ch9",
+      "name": "Spark MLlib机器学习库",
+      "questions": [
+        {
+          "id": "ch9-fill-1",
+          "type": "fill",
+          "stem": "Spark MLlib采用       语言编写。",
+          "answer": [
+            "Scala"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch9-fill-2",
+          "type": "fill",
+          "stem": "机器学习可以分为       、无监督学习和       。",
+          "answer": [
+            "有监督学习",
+            "半监督学习"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch9-fill-3",
+          "type": "fill",
+          "stem": "Spark MLlib定义了Vectors伴生对象，该伴生对象提供了       和sparse()方法创建本地向量中的密集向量和稀疏向量。",
+          "answer": [
+            "dense()"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch9-fill-4",
+          "type": "fill",
+          "stem": "Spark MLlib的数据类型主要包括       、标记点和本地矩阵。",
+          "answer": [
+            "本地向量"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch9-fill-5",
+          "type": "fill",
+          "stem": "在Spark MLlib中，       伴生对象提供了用于实现摘要统计的方法。",
+          "answer": [
+            "Summarizer"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch9-bool-1",
+          "type": "boolean",
+          "stem": "机器学习中的训练和预测过程可以看作人类的归纳和推测的过程。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch9-bool-2",
+          "type": "boolean",
+          "stem": "在Spark MLlib中，本地向量分为密集向量和稀疏向量。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch9-bool-3",
+          "type": "boolean",
+          "stem": "在Spark MLlib中，标记点是一种带有标签的本地向量，通常用于监督学习中。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch9-bool-4",
+          "type": "boolean",
+          "stem": "在Spark MLlib中，可以通过sampleBy()方法对DataFrame进行分层抽样。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch9-bool-5",
+          "type": "boolean",
+          "stem": "在Spark MLlib中，逻辑回归支持二项式逻辑回归和多项式逻辑回归。",
+          "answer": true,
+          "explanation": ""
+        },
+        {
+          "id": "ch9-choice-1",
+          "type": "single",
+          "stem": "下列选项中，对于机器学习的理解错误的是（",
+          "options": [],
+          "answer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "ch9-choice-2",
+          "type": "single",
+          "stem": "下列选项中，不属于Spark MLlib中有监督学习的是（",
+          "options": [
+            {
+              "label": "B",
+              "text": "回归算法"
+            },
+            {
+              "label": "C",
+              "text": "推荐算法"
+            },
+            {
+              "label": "D",
+              "text": "聚类算法"
+            }
+          ],
+          "answer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "ch9-choice-3",
+          "type": "single",
+          "stem": "下列选项中，不属于Spark MLlib工作流程的是（",
+          "options": [
+            {
+              "label": "A",
+              "text": "数据分析阶段\t\t\tB. 数据准备阶段"
+            },
+            {
+              "label": "C",
+              "text": "训练模型评估阶段\t\tD. 部署预测阶段"
+            }
+          ],
+          "answer": "A",
+          "explanation": ""
+        },
+        {
+          "id": "ch9-choice-4",
+          "type": "single",
+          "stem": "关于Spark MLlib中数据准备阶段经历的流程，下列选项正确的是（",
+          "options": [
+            {
+              "label": "A",
+              "text": "数据可视化→数据清洗→特征工程"
+            },
+            {
+              "label": "B",
+              "text": "数据采集→数据挖掘→特征提取"
+            },
+            {
+              "label": "C",
+              "text": "数据清洗→特征提取→模型训练"
+            },
+            {
+              "label": "D",
+              "text": "数据采集→原始数据→数据清洗→特征提取"
+            }
+          ],
+          "answer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "ch9-choice-5",
+          "type": "single",
+          "stem": "下列方法中，属于Summarizer伴生对象提供的用于实现摘要统计的有（",
+          "options": [],
+          "answer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "ch9-choice-6",
+          "type": "multiple",
+          "stem": "A. count()",
+          "options": [
+            {
+              "label": "B",
+              "text": "max()"
+            },
+            {
+              "label": "C",
+              "text": "variance()"
+            },
+            {
+              "label": "D",
+              "text": "numNonzeros()"
+            }
+          ],
+          "answer": [
+            "A",
+            "C"
+          ],
+          "explanation": ""
+        },
+        {
+          "id": "ch9-essay-1",
+          "type": "essay",
+          "stem": "简述Spark MLlib工作流程。",
+          "answer": "（参考答案暂缺，请参阅教材相关内容）",
+          "explanation": ""
+        }
+      ]
+    }
+  ]
+}
