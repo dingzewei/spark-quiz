@@ -34,7 +34,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <Header title="Spark 刷题 - 期末复习" />
+      <Header title="Spark期末复习（bydzw and zjw）" />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <div className="bg-white rounded-xl p-5 border border-gray-200">

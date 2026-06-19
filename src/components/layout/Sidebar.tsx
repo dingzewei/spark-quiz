@@ -19,7 +19,8 @@ export default function Sidebar({ onClose }: SidebarProps) {
   return (
     <aside className="w-56 bg-white border-r border-gray-200 min-h-screen p-4">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-xl font-bold text-blue-600">Spark 刷题</h1>
+        <h1 className="text-xl font-bold text-blue-600">Spark期末复习</h1>
+        <p className="text-xs text-gray-400 mt-0.5">bydzw and zjw</p>
         <button onClick={onClose} className="md:hidden text-gray-400 hover:text-gray-600">✕</button>
       </div>
       <nav className="space-y-1">

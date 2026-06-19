@@ -32,7 +32,7 @@ function AppContent() {
         <button onClick={() => setSidebarOpen(!sidebarOpen)} className="text-gray-600 text-xl">
           {sidebarOpen ? '✕' : '☰'}
         </button>
-        <h1 className="text-lg font-bold text-blue-600">Spark 刷题</h1>
+        <h1 className="text-lg font-bold text-blue-600">Spark期末复习</h1>
         <div className="w-6"></div>
       </div>
 
