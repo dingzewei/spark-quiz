@@ -15,7 +15,7 @@ export default function Header({ title, backTo, actions }: HeaderProps) {
             ← 返回
           </Link>
         )}
-        <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
+        <h2 className="text-xl md:text-2xl font-bold text-gray-800">{title}</h2>
       </div>
       {actions && <div className="flex items-center gap-2">{actions}</div>}
     </header>

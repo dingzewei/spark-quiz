@@ -9,12 +9,19 @@ const navItems = [
   { path: '/stats', label: '答题统计', icon: '📊' },
 ];
 
-export default function Sidebar() {
+interface SidebarProps {
+  onClose?: () => void;
+}
+
+export default function Sidebar({ onClose }: SidebarProps) {
   const location = useLocation();
 
   return (
     <aside className="w-56 bg-white border-r border-gray-200 min-h-screen p-4">
-      <h1 className="text-xl font-bold text-blue-600 mb-6">Spark 刷题</h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-xl font-bold text-blue-600">Spark 刷题</h1>
+        <button onClick={onClose} className="md:hidden text-gray-400 hover:text-gray-600">✕</button>
+      </div>
       <nav className="space-y-1">
         {navItems.map(item => {
           const active = location.pathname === item.path ||
@@ -23,6 +30,7 @@ export default function Sidebar() {
             <Link
               key={item.path}
               to={item.path}
+              onClick={onClose}
               className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                 active
                   ? 'bg-blue-50 text-blue-700 font-medium'
